@@ -9,31 +9,34 @@
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <main id="main-contanier flex-column">
+    <main id="main-container" class="flex-column">
       <div class="flex-column"><h1>TEAM GENERATOR</h1></div>
-      <div class="flex-row justify-between">
+      <div class="flex-row">
         <h2>Add Member</h2>
         <h2>Teams</h2>
       </div>
       <div class="flex-row">
         <div class="flex-column">
           <div class="flex-row">
-            <div>
-              <div></div>
-              <div></div>
+            <div class="flex-row">
+              <input type="text" placeholder="Name" id="name" />
+              <div id="add" onclick="addToList()">Add</div>
             </div>
-            <div id="-"></div>
-            <div id="team-number"></div>
-            <div id="+"></div>
+            <div class="flex-row">
+              <div id="minus" onclick="remove1Team()">-</div>
+              <div id="number-of-teams">0</div>
+              <div id="plus" onclick="add1Team()">+</div>
+            </div>
           </div>
           <div id="name-list"></div>
           <div class="flex-row">
-            <div id="assign-member"></div>
-            <div id="reset"></div>
+            <div id="assign-member" onclick="assignMember()">Assign Member</div>
+            <div id="reset" onclick="reset()">Reset</div>
           </div>
         </div>
         <div class="flex-row" id="teams-display"></div>
       </div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>

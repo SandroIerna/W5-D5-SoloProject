@@ -23,3 +23,171 @@ body {
 .justify-between {
   justify-content: space-between;
 }
+
+#main-container {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  align-content: space-around;
+}
+
+#main-container > div.flex-column > h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+#main-container > div.flex-row.justify-between {
+  width: 100%;
+}
+
+#main-container > div.flex-row > h2:nth-child(1) {
+  width: 70%;
+  border-radius: 6px;
+}
+
+#add {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #697cf7;
+  cursor: pointer;
+}
+
+#main-container > div:nth-child(2) {
+  width: 50%;
+}
+
+#main-container > div:nth-child(3) > div.flex-column > div:nth-child(1) {
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+}
+
+#main-container > div:nth-child(3) > div.flex-column {
+  gap: 20px;
+  width: 50%;
+}
+#main-container
+  > div:nth-child(3)
+  > div.flex-column
+  > div:nth-child(1)
+  > div:nth-child(1) {
+  width: 65%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#main-container
+  > div:nth-child(3)
+  > div.flex-column
+  > div:nth-child(1)
+  > div:nth-child(2) {
+  width: 30%;
+}
+
+#main-container
+  > div:nth-child(3)
+  > div.flex-column
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > input[type="text"] {
+  width: 80%;
+  border: solid 2px;
+  border-color: lightgray;
+}
+
+#minus,
+#plus,
+#number-of-teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#minus,
+#plus {
+  font-size: 20px;
+  width: 20%;
+  background-color: #697cf7;
+  border-radius: 4px;
+  height: 100%;
+  cursor: pointer;
+}
+
+#number-of-teams {
+  flex-grow: 1;
+}
+
+#name-list {
+  min-height: 300px;
+  border: solid 1px;
+  width: 100%;
+  border-radius: 6px;
+  border-color: lightgray;
+  box-shadow: inset 0px 4px 15px -2px gray;
+}
+
+#main-container > div:nth-child(3) > div.flex-column > div:nth-child(3) {
+  height: 40px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#assign-member {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #697cf7;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#reset {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b93f46;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#teams-display {
+  width: 50%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex;
+}
+
+.team-card {
+  width: 150px;
+  min-height: 250px;
+  border: solid 1px;
+  border-radius: 6px;
+  border-color: lightgray;
+  box-shadow: 0px 9px 7px 0px #cacaca;
+}
+
+.team-number > h2 {
+  margin: 0px;
+}
+
+.listed-name {
+  padding-left: 20px;
+  width: auto;
+  height: 40px;
+  /* background-color: rosybrown; */
+  border-bottom: 1px solid;
+  border-color: gray;
+  display: flex;
+  align-items: center;
+}
