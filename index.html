@@ -19,7 +19,12 @@
         <div class="flex-column">
           <div class="flex-row">
             <div class="flex-row">
-              <input type="text" placeholder="Name" id="name" />
+              <input
+                type="text"
+                placeholder="Name"
+                id="name"
+                onkeydown="keyDown(event)"
+              />
               <div id="add" onclick="addToList()">Add</div>
             </div>
             <div class="flex-row">

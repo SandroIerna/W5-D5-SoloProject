@@ -45,8 +45,23 @@ let remove1Team = function () {
   generateTeams();
 };
 
+let shuffle = function (array) {
+  array.sort(() => Math.random() - 0.5);
+  return array;
+};
+
+let arrayOfNames = [];
+
+let pushInArray = function () {
+  let listedNames = document.getElementsByClassName("listed-name");
+  for (let name of listedNames) {
+    arrayOfNames.push(name);
+  }
+};
+
 let assignMember = function () {
-  let arrayOfNames = document.getElementsByClassName("listed-name");
+  pushInArray();
+  shuffle(arrayOfNames);
   if (teamNumber !== 0) {
     let j = 0;
     for (let i = 0; i < arrayOfNames.length; i++) {
@@ -68,6 +83,7 @@ let assignMember = function () {
     let list = document.getElementById("name-list");
     list.innerHTML = "";
   }
+  arrayOfNames = [];
 };
 
 let reset = function () {
@@ -77,4 +93,10 @@ let reset = function () {
   numberOfTeams.innerText = 0;
   displayTeams.innerHTML = "";
   list.innerHTML = "";
+};
+
+let keyDown = function (event) {
+  if (event.key === "Enter") {
+    addToList();
+  }
 };
